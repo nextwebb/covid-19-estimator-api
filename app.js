@@ -2,7 +2,10 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const logger = require('morgan');
+const logger  = require('./middleware/logger');
+const responseTime = require('response-time')
+
+
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -10,11 +13,26 @@ const usersRouter = require('./routes/users');
 const app = express();
 
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(logger('dev'));
+app.use(responseTime(
+  (req, res, time ) => { 
+    let response  = req.method + " " + req.originalUrl+ " " + res.statusCode + " " + time +"ms" ;
+  
+    
+    logger.info(response);
+    //let oldSend = res.send;
+    //res.send(oldSend)
+    //res.send = function (data) {
+      //logger.info(JSON.parse(data));
+      //oldSend.apply(res, data);
+   // }
+  }
+));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());

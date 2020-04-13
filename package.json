@@ -12,10 +12,14 @@
     "dotenv": "^8.2.0",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+    "express-winston": "^4.0.3",
     "http-errors": "~1.6.3",
     "mongodb": "^3.5.5",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.3",
-    "object-to-xml": "^2.0.0"
+    "object-to-xml": "^2.0.0",
+    "response-time": "^2.3.2",
+    "winston": "^3.2.1",
+    "winston-mongodb": "^5.0.1"
   }
 }
