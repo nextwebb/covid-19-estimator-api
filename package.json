@@ -2,6 +2,9 @@
   "name": "covid-api",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "12.16.1"
+  },
   "scripts": {
     "start": "node db",
     "watch": "nodemon db"

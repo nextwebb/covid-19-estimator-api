@@ -42,3 +42,4 @@
 {"message":"GET /api/v1/on-covid-19/logs 200 1718.065447ms","level":"info","timestamp":"2020-04-13T22:09:09.183Z"}
 {"message":"GET /api/v1/on-covid-19/logs 200 2192.521072ms","level":"info","timestamp":"2020-04-13T22:10:57.016Z"}
 {"message":"POST /api/v1/on-covid-19/xml 200 17.58125ms","level":"info","timestamp":"2020-04-13T22:37:30.489Z"}
+{"message":"POST /api/v1/on-covid-19 200 19.271383999999998ms","level":"info","timestamp":"2020-04-13T23:02:38.134Z"}
