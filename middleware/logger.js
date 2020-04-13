@@ -16,7 +16,7 @@ const logger = createLogger({
         }),
         new transports.MongoDB({
             level: 'info',
-            db: process.env.connectionstring,
+            db: process.env.CONNECTIONSTRING,
             options: {
                 useUnifiedTopology: true
             },
