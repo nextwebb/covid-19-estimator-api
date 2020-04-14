@@ -16,8 +16,8 @@ exports.estimate =  function(req, res){
     } else if( format === 'xml') {
         let data = req.body;
         let resturnedEstimation = Estimator(data);
-        res.set('Content-Type', 'text/xml');
-        res.set( 'charset', 'UTF-8');
+        res.header('Content-Type', 'application/xml');
+        res.header('charset', 'UTF-8')
         let options = {compact: true, ignoreComment: true, spaces: 4};
         let result = convert.json2xml(resturnedEstimation, options);
         console.log(result);
@@ -47,14 +47,10 @@ exports.getAllLogs = async function(req, res){
                 let array = allLogs.map((element, index, array)=>{
                     return element.message
                 })
-                res.set('Content-Type', 'text/html');
-                res.set( 'charset', 'UTF-8');
+                res.header('Content-Type', 'text/plain');
+                res.header('charset', 'UTF-8');
                 console.log(array.toString().split(",").join("\n \n"));
                 res.send(array.toString().split(",").join("\n \n"));
-               
-             
-
-
                    
 }
        

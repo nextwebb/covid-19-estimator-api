@@ -4,6 +4,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger  = require('./middleware/logger');
 const responseTime = require('response-time')
+const cors = require('cors')
+
 
 
 
@@ -18,6 +20,7 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(cors());
 app.use(responseTime(
   (req, res, time ) => { 
     let response  = req.method + " " + req.originalUrl+ " " + res.statusCode + " " + time +"ms" ;
