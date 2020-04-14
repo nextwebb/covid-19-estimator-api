@@ -32,28 +32,15 @@ exports.estimateDefault =  function(req, res){
 
 exports.getAllLogs = async function(req, res){
 
-                //  let allLogs = await logsCollection.find({}).toArray() 
+                 let allLogs = await logsCollection.find({}).toArray() 
                  
-                // let array = allLogs.map((element, index, array)=>{
-                //     return element.message
-                // })
-                // array.forEach((element, index, array) => {
-                //     console.log(element);
-                //     res.send(element);
-                //     fs.writeFile("data.log", element, function(err) {
-                //         if(err) {
-                //             return console.log(err);
-                //         }
-                //         console.log("The file was saved!");
-                //     }); 
-                // } )
+                let array = allLogs.map((element, index, array)=>{
+                    return element.message
+                })
 
-                
-                fs.readFile('info.log', function(err, data) {
-                   if(!err){
-                       res.send(data)
-                   }
-                  });
+                console.log(array.toString().split(",").join("\n"));
+                res.send(array.toString().split(",").join("\n"));
+               
              
 
 
