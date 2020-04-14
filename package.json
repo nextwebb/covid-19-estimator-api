@@ -24,6 +24,7 @@
     "response-time": "^2.3.2",
     "winston": "^3.2.1",
     "winston-mongodb": "^5.0.1",
+    "xml": "^1.0.1",
     "xml-js": "^1.6.11"
   }
 }
