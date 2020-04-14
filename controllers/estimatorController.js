@@ -49,8 +49,8 @@ exports.getAllLogs = async function(req, res){
                 })
                 res.set('Content-Type', 'text/html');
                 res.set( 'charset', 'UTF-8');
-                console.log(array.toString().split(",").join("\n"));
-                res.send(array.toString().split(",").join("\n"));
+                console.log(array.toString().split(",").join("\n \n"));
+                res.send(array.toString().split(",").join("\n \n"));
                
              
 
