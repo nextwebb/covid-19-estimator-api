@@ -57,3 +57,5 @@
 {"message":"GET /api/v1/on-covid-19/logs 200 2014.519243ms","level":"info","timestamp":"2020-04-14T00:55:29.040Z"}
 {"message":"GET /api/v1/on-covid-19/logs 200 2152.3817090000002ms","level":"info","timestamp":"2020-04-14T00:56:42.475Z"}
 {"message":"GET /api/v1/on-covid-19/logs 200 2004.078099ms","level":"info","timestamp":"2020-04-14T00:58:25.200Z"}
+{"message":"POST /api/v1/on-covid-19/xml 200 13.926563999999999ms","level":"info","timestamp":"2020-04-14T01:08:12.385Z"}
+{"message":"POST /api/v1/on-covid-19/xml 200 12.644734ms","level":"info","timestamp":"2020-04-14T01:09:42.096Z"}

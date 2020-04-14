@@ -1,5 +1,5 @@
 const Estimator = require('../models/Estimator');
-const o2x = require('object-to-xml');
+const convert = require('xml-js'); 
 const logsCollection = require('../db').db().collection('logs')
 const fs = require('fs');
 
@@ -15,11 +15,19 @@ exports.estimate =  function(req, res){
 
     } else if( format === 'xml') {
         let data = req.body;
-        let resturnedEstimation = o2x(Estimator(data));
-        return res.json(resturnedEstimation);
+        let resturnedEstimation = Estimator(data);
+        let options = {compact: true, ignoreComment: true, spaces: 4};
+        let result = convert.json2xml(resturnedEstimation, options);
+        console.log(result);
+        return res.send(result);
     } 
 
 }
+
+
+
+
+
 
 exports.estimateDefault =  function(req, res){
 
